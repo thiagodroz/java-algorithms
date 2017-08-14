@@ -14,7 +14,18 @@ public class DFS {
 		for (Vertex v : vertexList) {
 			if (!v.isVisited()) {
 				v.setVisited(true);
-				dfsWithStack(v);
+				dfsRecursive(v);
+			}
+		}
+	}
+	
+	private void dfsRecursive (Vertex v) {
+		System.out.println(v + " ");
+		
+		for (Vertex vertex : v.getNeighboursList()) {
+			if (!vertex.isVisited()) {
+				vertex.setVisited(true);
+				dfsRecursive(vertex);
 			}
 		}
 	}
