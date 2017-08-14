@@ -27,7 +27,7 @@ public class WebCrawler {
 			String v = this.queue.remove();
 			String rawHtml = readUrl(v);
 			
-			String regexp = "http://(\\w+\\.)*(\\w+)";
+			String regexp = "(http|ftp|https)://([\\w_-]+(?:(?:\\.[\\w_-]+)+))([\\w.,@?^=%&:/~+#-]*[\\w@?^=%&/~+#-])?";
 			Pattern pattern = Pattern.compile(regexp);
 			Matcher matcher = pattern.matcher(rawHtml);
 			
