@@ -32,6 +32,29 @@ public class DisjointSet {
 		return rootNode.getId();
 	}
 	
+	public void union(Node node1, Node node2) {
+		int index1 = find(node1);
+		int index2 = find(node2);
+		
+		if (index1 == index2) {
+			return;
+		}
+		
+		Node root1 = this.rootNodes.get(index1);
+		Node root2 = this.rootNodes.get(index2);
+		
+		if (root1.getRank() < root2.getRank()) {
+			root1.setParent(root2);
+		} else if(root1.getRank() > root2.getRank()) {
+			root2.setParent(root1);
+		} else {
+			root2.setParent(root1);
+			root1.setRank(root1.getRank() + 1);
+		}
+		
+		this.setCount--;
+	}
+	
 	private void makeSets(List<Vertex> vertexes) {
 		for (Vertex v : vertexes) {
 			makeSet(v);
