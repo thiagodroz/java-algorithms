@@ -14,4 +14,5 @@ Algorithms:
     - Longest Path
     - DAG Shortest Path
   - Kruskal Algorithm
-  
+  - Prim-Jarnik Algorithm
+    - Lazy implementation
