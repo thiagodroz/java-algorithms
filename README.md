@@ -16,3 +16,4 @@ Algorithms:
   - Kruskal Algorithm
   - Prim-Jarnik Algorithm
     - Lazy implementation
+    - Eager implementation
