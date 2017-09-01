@@ -18,3 +18,4 @@ Algorithms:
     - Lazy implementation
     - Eager implementation
   - Kosaraju Algorithm
+  - Tarjan Algorithm
