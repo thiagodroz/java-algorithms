@@ -19,3 +19,4 @@ Algorithms:
     - Eager implementation
   - Kosaraju Algorithm
   - Tarjan Algorithm
+  - Ford-Fulkerson Algorithm
